@@ -1,0 +1,136 @@
+.login {
+    width: 400px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+}
+
+.login h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.login form {
+    font-size: 20px;
+}
+
+.login form .form-group {
+    margin-bottom: 12px;
+
+}
+
+.login form input[type='submit'] {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.login form p {
+    font-size: 15px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.btn-close {
+    align-items: end;
+}
+
+#tableList {
+    display: table;
+}
+
+.abc {
+    display: table-row;
+}
+
+.abc label {
+    display: table-cell;
+    padding-left: 50px;
+}
+
+.abc input {
+    margin-left: 30px;
+}
+
+#tableLst {
+    display: table;
+}
+
+.abcd {
+    display: table-row;
+}
+
+.abcd label {
+    display: table-cell;
+    padding-left: 30px;
+}
+
+.abcd span {
+    padding-right: 10px;
+}
+
+#finalPrc {
+    padding-left: 158px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#total {
+    position: fixed;
+    float: right;
+    right: 0;
+    padding-right: 10%;
+    /* display: inline-block; */
+    display: flex;
+    flex-direction: column;
+}
+
+.bbbb {
+    padding-left: 28%;
+    margin-top: 100px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#aaaa {
+    padding-left: 100px;
+}
+
+.ordbbbb{
+    padding-left: 30%;
+    margin-top: 80px;
+}
+
+#elseImg{
+	padding-top:10%;
+	text-align: center;
+	width: 100%;
+	padding-right: 7%;
+}
+
+#elseBtn{
+	padding-top:10%;
+	padding-left:35%;
+	text-align: center;
+	cursor: pointer;
+	font-size: 25px;
+}
+
+
+
+
+
+
+

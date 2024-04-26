@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shopify</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/intro.css">
+	<link rel="stylesheet" href="css/skin.css">
+	<link rel="stylesheet" href="css/banner.css">
+</head>
+
+<body>
+
+	<div class="container pb-5">
+
+		<!-- NavBar -->
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="container-fluid name">
+				<a href="#">
+					<img src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Symbol.png" alt="Shopify"
+						width="100" height="50">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="/home"><i
+									class="fa-solid fa-house"></i>&nbsp;Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/product"><i class="fa-solid fa-cubes"></i>&nbsp;Products</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/shop"><i class="fa-solid fa-bag-shopping"></i>&nbsp;Shop</a>
+						</li>
+					</ul>
+
+					<!-- Search Input -->
+					<div class="col-lg-4">
+						<form class="d-flex" role="search">
+							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+							<button class="btn btn-outline-light" type="submit">Search</button>
+						</form>
+					</div>
+
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="/cart"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Cart <span
+									id="itemsCount"> </span></a>
+						</li>
+
+						<!-- Dropdown -->
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="profile" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+							<ul class="dropdown-menu dropdown-menu-end">
+								<li class="afterLogin d-none"><a class="dropdown-item" href="#"
+										data-bs-target="#exampleModal" data-bs-toggle="modal"><i
+											class="fa-solid fa-user"></i>&nbsp;Profile</a></li>
+								<li class="afterLogin d-none"><a class="dropdown-item" href="/order"><i
+											class="fa-solid fa-cubes"></i>&nbsp;Orders</a>
+								</li>
+								<li class="beforeLogin d-none"><a class="dropdown-item" href="#" data-bs-toggle="modal"
+										data-bs-target="#signUpModal"><i
+											class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;Create Account</a>
+								</li>
+								<li class="beforeLogin d-none"><a class="dropdown-item" href="#" data-bs-toggle="modal"
+										data-bs-target="#exampleModal"><i
+											class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;Sign In</a></li>
+								<li class="afterLogin d-none">
+									<hr class="dropdown-divider">
+								</li>
+								<li class="afterLogin d-none">
+									<a class="dropdown-item" href="#" onclick="logout()">
+										<i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+		<!--Menu-->
+		<div style="display: flex;">
+			<div class="btn-group dropend">
+				<button type="button" class="btn btn-dark dropdown-toggle btnCategory" data-bs-toggle="dropdown"
+					aria-expanded="false">
+					Menu
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="/home"><i class="fa-solid fa-cubes"></i>&nbsp;Home</a></li>
+					<li><a class="dropdown-item" href="/product"><i class="fa-solid fa-cubes"></i>&nbsp;Products</a>
+					</li>
+					<li><a class="dropdown-item" href="/shop"><i class="fa-solid fa-cubes"></i>&nbsp;Shop</a></li>
+					<li><a class="dropdown-item" href="/cart"><i class="fa-solid fa-cubes"></i>&nbsp;Your Cart</a>
+					</li>
+					<li><a class="dropdown-item" href="/orders"><i class="fa-solid fa-cubes"></i>&nbsp;Orders</a>
+					</li>
+
+					<li>
+						<hr class="dropdown-divider">
+					</li>
+					<li>
+						<a class="dropdown-item" href="#">My Account</a>
+					</li>
+
+				</ul>
+			</div>
+
+			<div class="header-center">
+				<div class="d-flex justify-content-center mt-5 topic"> <span class="text text-center">Finding Best
+						Products Now<br> in Your Fingertips</span>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Carousel Banner -->
+		<div class="mains">
+			<div class="intro-section pt-5 pb-3 mb-2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<!-- <div class="intro-slider-container slider-container-ratio mb-2 mb-lg-0"> -->
+							<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+								<div class="carousel-indicators">
+									<button type="button" data-bs-target="#carouselExampleIndicators"
+										data-bs-slide-to="0" class="active" aria-current="true"
+										aria-label="Slide 1"></button>
+									<button type="button" data-bs-target="#carouselExampleIndicators"
+										data-bs-slide-to="1" aria-label="Slide 2"></button>
+								</div>
+								<div class="carousel-inner">
+									<div class="carousel-item active" data-bs-interval="2500">
+										<img src="image/slide-1.jpg" class="d-block w-100" alt="...">
+										<!-- <div class="carousel-caption"> -->
+										<div class="intro-content">
+											<h3 class="intro-subtitle text-primary">Daily Deals</h3>
+											<h1 class="intro-title">
+												AirPods <br>Earphones
+											</h1>
+
+											<div class="intro-price">
+												<sup>Today:</sup>
+												<span class="text-primary">
+													$247<sup>.99</sup>
+												</span>
+											</div>
+
+											<a href="category.html" class="btn btn-primary btn-round">
+												<span>Click Here</span>
+												<i class="icon-long-arrow-right"></i>
+											</a>
+										</div>
+										<!-- </div> -->
+									</div>
+									<div class="carousel-item" data-bs-interval="2500">
+										<img src="image/slide-2.jpg" class="d-block w-100" alt="...">
+										<!-- <div class="carousel-caption d-lg-none d-xl-block"> -->
+										<div class="intro-content">
+											<h3 class="intro-subtitle text-primary">Deals and Promotions</h3>
+											<h1 class="intro-title">
+												Echo Dot <br>3rd Gen
+											</h1>
+
+											<div class="intro-price">
+												<sup class="intro-old-price">$49,99</sup>
+												<span class="text-primary">
+													$29<sup>.99</sup>
+												</span>
+											</div>
+
+											<a href="category.html" class="btn btn-primary btn-round">
+												<span>Click Here</span>
+												<i class="icon-long-arrow-right"></i>
+											</a>
+										</div>
+										<!-- </div> -->
+									</div>
+								</div>
+								<button class="carousel-control-prev" type="button"
+									data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Previous</span>
+								</button>
+								<button class="carousel-control-next" type="button"
+									data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="visually-hidden">Next</span>
+								</button>
+							</div>
+							<!-- </div> -->
+						</div>
+
+						<div class="col-lg-4 intro">
+							<div class="intro-banners">
+								<div class="banner mb-lg-1 mb-xl-2">
+									<a href="#">
+										<img src="image/banner-1.jpg" alt="Banner">
+									</a>
+
+									<div class="banner-content">
+										<h4 class="banner-subtitle d-lg-none d-xl-block"><a href="#">Top Product</a>
+										</h4>
+										<h3 class="banner-title"><a href="#">Edifier <br>Stereo Bluetooth</a></h3>
+										<a href="#" class="banner-link">Shop Now<i
+												class="icon-long-arrow-right"></i></a>
+									</div>
+								</div>
+
+								<div class="banner mb-lg-1 mb-xl-2">
+									<a href="#">
+										<img src="image/banner-2.jpg" alt="Banner">
+									</a>
+
+									<div class="banner-content">
+										<h4 class="banner-subtitle d-lg-none d-xl-block"><a href="#">Clearance</a></h4>
+										<h3 class="banner-title"><a href="#">GoPro - Fusion 360 <span>Save
+													$70</span></a></h3>
+										<a href="#" class="banner-link">Shop Now<i
+												class="icon-long-arrow-right"></i></a>
+									</div>
+								</div>
+
+								<div class="banner mb-0">
+									<a href="#">
+										<img src="image/banner-3.jpg" alt="Banner">
+									</a>
+
+									<div class="banner-content">
+										<h4 class="banner-subtitle d-lg-none d-xl-block"><a href="#">Featured</a></h4>
+										<h3 class="banner-title"><a href="#">Apple Watch 4 <span>Our Hottest
+													Deals</span></a></h3>
+										<a href="#" class="banner-link">Shop Now<i
+												class="icon-long-arrow-right"></i></a>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br>
+
+
+		<div class="d-flex justify-content-center align-items-center mt-5"> <button
+				class="btn btn-dark btnCategory1">OUR
+				CATEGORIES</button> </div><br>
+
+		<div class="row mt-2 g-4">
+			<div class="col-md-3">
+				<div class="card newCards p-1">
+					<div class="d-flex justify-content-between align-items-center p-2">
+						<div class="flex-column lh-1 imagename"> <span>Mobile</span> <span>Phones</span> </div>
+						<div> <img src="https://i.imgur.com/b9zkoz0.jpg" height="100" width="100" /> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card newCards p-2">
+					<div class="d-flex justify-content-between align-items-center p-2">
+						<div class="flex-column lh-1 imagename"> <span>Head</span> <span>Phones</span> </div>
+						<div> <img src="https://i.imgur.com/SHWASPG.png" height="100" width="100" /> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card newCards p-2">
+					<div class="d-flex justify-content-between align-items-center p-2">
+						<div class="flex-column lh-1 imagename"> <span>Smart</span> <span>Watches</span> </div>
+						<div> <img src=" https://i.imgur.com/Ya0OXCv.png" height="100" width="100" /> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card newCards p-2">
+					<div class="d-flex justify-content-between align-items-center p-2">
+						<div class="flex-column lh-1 imagename"> <span>Air</span> <span>Purifiers</span> </div>
+						<div> <img src="https://i.imgur.com/2gvGwbh.png" height="100" width="100" /> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card newCards p-2tr5">
+					<div class="d-flex justify-content-between align-items-center p-2">
+						<div class="flex-column lh-1 imagename"> <span>Vacuum</span> <span>Cleaners</span> </div>
+						<div> <img src="https://i.imgur.com/UMQJpSG.png" height="100" width="100" /> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card newCards p-2">
+					<div class="d-flex justify-content-between align-items-center p-2">
+						<div class="flex-column lh-1 imagename"> <span>Washing</span> <span>Machines</span> </div>
+						<div> <img src="https://i.imgur.com/e9CyhXR.png" height="100" width="100" /> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card newCards p-2">
+					<div class="d-flex justify-content-between align-items-center p-2">
+						<div class="flex-column lh-1 imagename"> <span>Smart</span> <span>Televisions</span> </div>
+						<div> <img src=" https://i.imgur.com/Zq8VigZ.png" height="100" width="100" /> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card newCards p-2">
+					<div class="d-flex justify-content-between align-items-center p-2">
+						<div class="flex-column lh-1 imagename"> <span>Laptops</span> </div>
+						<div> <img src="https://i.imgur.com/6pK5oZl.jpg" height="100" width="100" /> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- SignIn popup -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content" style="width: 400px; left: 50px;">
+					<div class="login">
+						<h1 class="text-center">Login</h1>
+						<form id="loginForm" action="javascript:void(0);" mehtod="POST" onsubmit="login()">
+							<div class="form-group">
+								<label class="form-label" for="email">Email Id</label>
+								<input class="form-control" type="email" id="email" placeholder="Enter Your Email">
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="password">Password</label>
+								<input class="form-control" type="password" id="password"
+									placeholder="Enter Your Password">
+							</div>
+							<div class="form-group form-check">
+								<input class="form-check-input" type="checkbox" id="checkbox">
+								<label class="form-check-label" for="checkbox">Remember me</label>
+							</div>
+							<button class="btn btn-success w-100" type="submit" value="SIGN IN">SIGN IN</button>
+							<p>Not a Member? &nbsp; <a href="#" data-bs-toggle="modal"
+									data-bs-target="#signUpModal">Sign Up</a></p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- SignUp popup -->
+		<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content" style="width: 400px; left: 50px;">
+					<div class="login">
+						<h1 class="text-center">SignUp</h1>
+						<form id="signUpForm" action="javascript:void(0);" mehtod="POST" onsubmit="signUp()">
+							<div class="form-group">
+								<label class="form-label" for="name">Name</label>
+								<input class="form-control" type="text" id="name" placeholder="Enter Your Name">
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="emailId">Email Id</label>
+								<input class="form-control" type="email" id="emailId" placeholder="Enter Your Email">
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="mobile">Mobile</label>
+								<input class="form-control" type="number" id="mobile" placeholder="Enter Your Mobile">
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="passcode">Password</label>
+								<input class="form-control" type="password" id="passcode"
+									placeholder="Enter Your Password">
+							</div>
+							<div class="form-group form-check">
+								<input class="form-check-input" type="checkbox" id="check">
+								<label class="form-check-label" for="check">Remember me</label>
+							</div>
+							<button class="btn btn-success w-100" type="submit" value="SIGN IN">SIGN UP</button>
+							<p>Already Registered!! &nbsp; <a href="#" data-bs-toggle="modal"
+									data-bs-target="#exampleModal">Sign In</a></p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+<!-- Footer -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row" style="justify-content: space-between;">
+                    <div class="col-lg-4 col-md-6 footer-contact">
+                        <h3>Shopify</h3>
+                        <p>
+                            Coimbatore,<br> Tamil Nadu <br><br>
+                            <strong>Phone:</strong> +91 9876543210<br>
+                            <strong>Email:</strong> shopify@gmail.com<br>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/home">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/products">Products</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/shop">Shop</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#" data-bs-target="#exampleModal"
+                                    data-bs-toggle="modal">Sign Up</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-5 col-lg-3 widget-title">
+                        <h4>My Account</h4>
+                        <ul>
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="/cart">View Cart</a></li>
+                            <li><a href="#">My Wishlist</a></li>
+                            <li><a href="#">Track My Order</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Shopify.</span></strong> All Rights Reserved.
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="tel:+917339110765"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://wa.me/+919876543210"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:shopify@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://instagram.com/smartproservice2?igshid=NDk5N2NlZjQ="><i
+                        class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+		integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+	<script src="script/jquery-3.6.4.min.js"></script>
+	<script src="js/home.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
